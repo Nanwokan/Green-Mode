@@ -1,0 +1,107 @@
+:root {
+      --primary-color: black;
+      --secondary-color: rgb(105, 53, 85);
+      --text-color: #fff;
+  }
+  
+  body {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      margin: 0;
+      padding: 0;
+      flex-direction:column;
+      background-color: var(--secondary-color);
+  }
+  
+  header {
+  background-color: #ffffff;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  /* Pour espacer le logo et la navigation */
+  align-items: center;
+  /* Centrer les éléments verticalement */
+  }
+  
+  
+  
+  header>nav {
+  display: flex;
+  /* Afficher la navigation */
+  justify-content: left;
+  align-items: center;
+  /* Centrer les éléments verticalement */
+  }
+  
+  header>nav ul {
+  list-style-type: none;
+  /* Retirer les puces de la liste */
+  padding: 1em;
+  margin: 0;
+  /* Supprimer les marges par défaut */
+  }
+  
+  header > nav ul li {
+  list-style-type: none; /* Retirer les puces de la liste */
+  padding: 0;
+  font-size: 1.2em;
+  margin: 0.5em 0; /* Ajouter de l'espace horizontal entre les éléments */
+  }
+  
+  header>div>img {
+  max-width: 70%;
+  /* Ajuster la taille maximale du logo à la largeur du conteneur */
+  height: auto;
+  /* Hauteur automatique pour conserver les proportions */
+  }
+  
+  a {
+      text-decoration: none;
+      color: #000000;
+      margin: 0 1em;
+      /* Ajouter une marge entre les liens de navigation */
+  }
+  footer {
+      background-color: var(--primary-color);
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+  }
+
+  @media screen and (min-width: 768px) {
+
+      header {
+          background-color: #ffffff;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+      }
+  
+      header>div>img {
+          max-width: 100px;
+          height: auto;
+      }
+  
+      .nav {
+          display: flex;
+          justify-content: center;
+          margin-top: 1em;
+      }
+  
+      .logo {
+          margin-bottom: 0;
+      }
+  
+      nav ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+      }
+  
+      nav a {
+          text-decoration: none;
+          color: #000000;
+          margin: 0 1em;
+      }
+}

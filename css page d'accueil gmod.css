@@ -1,0 +1,396 @@
+.slider {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      height: auto;
+  }
+  
+  .item {
+      margin-top: 5%;
+      width: 100vw;
+      /* Utiliser 100% de la largeur de la vue */
+      height: 300px;
+      /* Supprimer les points de la liste */
+      position: relative;
+      /* Position relative pour positionner le contenu texte */
+      background-size: cover;
+      /* Redimensionner les images pour couvrir complètement l'élément */
+      background-position: center;
+  }
+  
+  .content {
+      width: 50vw;
+      height: 250px;
+      position: absolute;
+      color: white;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+      right: 3rem;
+      top: 5%;
+  }
+  
+  button {
+      width: fit-content;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: white;
+      border: 2px solid white;
+      border-radius: 0.25rem;
+      padding: 0.75rem;
+      cursor: pointer;
+  }
+  
+  main>.nav {
+      display: none;
+      /* Masquer la navigation pour les écrans de petite taille */
+  }
+  
+  .slider-container {
+      width: 90%;
+      height: auto;
+      margin: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      background-color: white;
+      text-align: center;
+      /* Ajoutez cette ligne pour centrer le texte */
+      border-radius: 1em;
+  }
+  
+  .slider-container h2 {
+      margin: 3px;
+      /* Ajoutez de l'espace sous le titre si nécessaire */
+  }
+  
+  .slider-container p {
+      /* */
+  }
+  
+  .slider-track {
+      display: flex;
+      justify-content: center;
+      /* Centrer les articles horizontalement */
+      transition: transform 0.5s ease;
+  }
+  
+  .slider-item {
+      flex: 0 0 100%;
+      /* Pour afficher un article à la fois */
+      box-sizing: border-box;
+      padding: 1px;
+      margin: 0 10px;
+      /* Ajoute une marge entre les articles */
+  }
+  
+  
+  article>a>img {
+      max-width: 90%;
+      height: auto;
+  }
+  
+  .slider-nav {
+      text-align: center;
+      margin-bottom: 15px;
+      /* Ajoutez une marge en haut pour éviter que les flèches ne soient trop proches du slider */
+  }
+  
+  .prec,
+  .suiv {
+      font-size: 20px;
+      cursor: pointer;
+      margin: 0 10px;
+      /* Ajoutez une marge à gauche et à droite pour séparer les flèches */
+  }
+  
+  .prec,
+  .suiv {
+      color: #000000;
+      cursor: pointer;
+      border: 1px solid #272727;
+      border-radius: 50%;
+      padding: 1%;
+      background-color: #fff;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .prec:hover,
+  .suiv:hover {
+      background-color: var(--secondary-color);
+      color: #fff;
+  }
+  
+  .partnership-section {
+      background-color: rgb(5, 75, 5);
+      color: #fff;
+      padding: 2em;
+      text-align: center;
+  }
+  
+  .partnership-section h2 {
+      color: white;
+  }
+  
+  .partnership-section p {
+      color: #ffffff;
+  }
+  
+  .partners-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* Centrer les partenaires sur les appareils mobiles */
+      margin-top: 1em;
+  }
+  
+  .partner {
+      max-width: 150px;
+      /* Ajuster la largeur maximale des partenaires pour les appareils mobiles */
+      margin: 1em;
+      text-align: center;
+      /* Centrer le texte sur les appareils mobiles */
+  }
+  
+  .partner img {
+      max-width: 100%;
+      height: auto;
+      /* Assurez-vous que les images conservent leurs proportions */
+      object-fit: contain;
+  }
+  
+  .partner p {
+      margin-top: 0.5em;
+      font-weight: bold;
+  }
+  
+  .partner p {
+      margin-top: 0.5em;
+      font-weight: bold;
+  }
+
+  @media screen and (min-width: 768px) {
+
+      main {
+            position: relative;
+            width: auto;
+            height: 95vh; /* Ajustez selon vos besoins */
+            top: -3.4em; /* Déplace le main vers le haut pour supprimer l'espace */
+            text-align: center;
+        }
+  
+      .item {
+          width: 200px;
+          height: 300px;
+          list-style-type: none;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 1;
+          background-position: center;
+          background-size: cover;
+          border-radius: 20px;
+          box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
+          transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+      }
+  
+      .item:nth-child(1),
+      .item:nth-child(2) {
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          transform: none;
+          border-radius: 0;
+          box-shadow: none;
+          opacity: 1;
+      }
+  
+      .item:nth-child(3) {
+          left: 45%;
+      }
+  
+      .item:nth-child(4) {
+          left: calc(45% + 220px);
+      }
+  
+      .item:nth-child(5) {
+          left: calc(45% + 440px);
+      }
+  
+      .content {
+          width: min(30vw, 400px);
+          position: absolute;
+          top: 50%;
+          left: 3rem;
+          transform: translateY(-50%);
+          font: 400 0.85rem helvetica, sans-serif;
+          color: white;
+          text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+          opacity: 0;
+          display: none;
+      }
+  
+      .item:nth-of-type(2) .content {
+          display: block;
+          animation: show 0.75s ease-in-out 0.3s forwards;
+      }
+  
+      @keyframes show {
+          0% {
+              filter: blur(5px);
+              transform: translateY(calc(-50% + 75px));
+          }
+  
+          100% {
+              opacity: 1;
+              filter: blur(0);
+          }
+      }
+  
+  /* Déplace les flèches de navigation à gauche et à droite */
+  .main-nav {
+      position: relative;
+      top: 35em;
+      transform: translateY(-50%);
+      left: 0;
+      right: 0;
+      z-index: 1;
+  }
+  
+  /* Ajoutez une marge en haut pour éviter que les flèches ne soient trop proches du slider */
+  .main-nav .prev,
+  .main-nav .next {
+      margin-top: 20px;
+  }
+  
+  /* Réduisez la taille des flèches de navigation */
+  .main-nav .prev,
+  .main-nav .next {
+      font-size: 20px;
+      cursor: pointer;
+      margin: 0 10px;
+      color: #000000;
+      cursor: pointer;
+      border: 1px solid #272727;
+      border-radius: 50%;
+      padding: 1%;
+      background-color: #fff;
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Animation au survol des flèches de navigation */
+  .main-nav .prev:hover,
+  .main-nav .next:hover {
+      background-color: var(--secondary-color);
+      color: #fff;
+  }
+  
+  
+      .slider-container {
+          width: 90%;
+          height: auto;
+          margin: auto;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          overflow: hidden;
+          background-color: white;
+          text-align: center;
+          border-radius: 1em;
+      }
+  
+      .slider-container h2 {
+          margin: 1em;
+      }
+  
+      .slider-container p {
+          margin-top: 0;
+          margin: 30px;
+      }
+  
+      .slider-track {
+          display: flex;
+          transition: transform 0.5s ease;
+      }
+  
+      .slider-item {
+          flex: 0 0 33.3333%;
+          box-sizing: border-box;
+          padding: 10px;
+      }
+  
+      article>a>img {
+          max-width: 300px;
+          height: auto;
+      }
+  
+      .slider-nav {
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 1em;
+      }
+  
+      .prec,
+      .suiv {
+          font-size: 20px;
+          cursor: pointer;
+          margin: 0 10px;
+      }
+  
+      .prec,
+      .prev,
+      .next,
+      .suiv {
+          color: #000000;
+          cursor: pointer;
+          border: 1px solid #272727;
+          border-radius: 50%;
+          padding: 1%;
+          background-color: #fff;
+          transition: background-color 0.3s ease, color 0.3s ease;
+      }
+  
+      .prec:hover,
+      .suiv:hover {
+          background-color: var(--secondary-color);
+          color: #fff;
+      }
+  
+      .partnership-section {
+          background-color: rgb(5, 75, 5);
+          color: #fff;
+          padding: 2em;
+          text-align: center;
+      }
+  
+      .partnership-section h2 {
+          color: white;
+      }
+  
+      .partnership-section p {
+          color: #ffffff;
+      }
+  
+      .partners-list {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          margin-top: 1em;
+      }
+  
+      .partner {
+          max-width: 250px;
+          margin: 1em;
+      }
+  
+      .partner img {
+          max-width: 100%;
+          max-height: 100px;
+          object-fit: contain;
+      }
+  
+      .partner p {
+          margin-top: 0.5em;
+          font-weight: bold;
+      }
+  
+      
+  }
+  

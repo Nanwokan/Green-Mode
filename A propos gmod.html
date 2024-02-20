@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos de Nous - Green Mode Association</title>
+    <link rel="stylesheet" href="CSS commun gmod.css">
+    <link rel="stylesheet" href="css A propos gmod.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../Images/gmod logo/Green mode association logo.png" alt="Logo Green Mode Association">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="gmod association.html">Accueil</a></li>
+                <li><a href="A propos gmod.html">À propos</a></li>
+                <li><a href="evenements green mode.html">Événements</a></li>
+                <li><a href="#">S'Impliquer et Contribuer</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>À Propos de Nous</h1>
+        <section id="histoire">
+            <h2 onclick="toggleSection('histoire')">Notre Histoire</h2>
+            <p id="histoireContent">
+                Fondée en 2024, Green Mode est le résultat de la passion partagée par un groupe de visionnaires
+                déterminés à révolutionner l'industrie de la mode. Notre histoire débute avec la volonté commune de
+                promouvoir un mode de vie respectueux de l'environnement, éthique et durable.
+                <br><br>Au cours de notre parcours, nous avons collaboré avec des designers innovants, des experts en
+                durabilité et des communautés locales pour créer un impact positif. De la sensibilisation à la
+                consommation responsable à la promotion de pratiques de production éthiques, Green Mode s'efforce de
+                redéfinir les normes de l'industrie de la mode.
+            </p>
+        </section>
+
+        <section id="mission">
+            <h2 onclick="toggleSection('mission')">Notre Mission</h2>
+            <p id="missionContent">Notre mission chez Green Mode est de promouvoir une mode éthique et durable, en
+                encourageant des pratiques respectueuses de l'environnement, des conditions de travail justes et en
+                favorisant la consommation responsable.
+                Nous croyons en la création d'un impact positif sur l'industrie de la mode en inspirant et éduquant
+                notre communauté sur les choix vestimentaires qui soutiennent la durabilité, l'équité et l'innovation.
+                Ensemble, nous aspirons à transformer l'industrie de la mode vers un avenir plus conscient, où chaque
+                vêtement raconte une histoire de respect envers la planète et les personnes qui le créent.</p>
+        </section>
+
+        <section id="equipe">
+            <h2 onclick="toggleSection('equipe')">Notre équipe</h2>
+            
+            <p id="equipeContent">Découvrez notre équipe passionnée et engagée qui travaille chaque jour pour promouvoir
+                la durabilité et la mode éthique. Chacun de nos membres apporte une expertise unique pour faire de notre
+                association un acteur clé dans le domaine de la mode responsable.</p>
+            <div class="membre">
+            <div class="membre-equipe">
+                <img src="../Images/membre d'equipe/abigael.jpg" alt="Photo du membre de l'équipe">
+                <h3>Jeanne Martin</h3>
+                <p>CEO</p>
+            </div>
+
+            <div class="membre-equipe">
+                <img src="../Images/membre d'equipe/IMG-20240219-WA0005.jpg" alt="Photo du membre de l'équipe">
+                <h3>Thomas Dubois </h3>
+                <p>Vice President</p>
+            </div>
+            <div class="membre-equipe">
+                <img src="../Images/membre d'equipe/IMG-20240219-WA0004.jpg" alt="Photo du membre de l'équipe">
+                <h3>Fatima Koné</h3>
+                <p>Designer de Mode Éthique</p>
+            </div>
+
+            <div class="membre-equipe">
+                <img src="../Images/membre d'equipe/IMG-20240219-WA0003.jpg" alt="Photo du membre de l'équipe">
+                <h3>Nicolas Durand</h3>
+                <p>Chargé de Projet</p>
+            </div>
+            <div class="membre-equipe">
+                <img src="../Images/membre d'equipe/IMG-20240219-WA0002.jpg" alt="Photo du membre de l'équipe">
+                <h3>Pauline Leroux</h3>
+                <p>Responsable Événements</p>
+            </div>
+
+            <div class="membre-equipe">
+                <img src="../Images/membre d'equipe/IMG-20240219-WA0001.jpg" alt="Photo du membre de l'équipe">
+                <h3>Jaylan Adama</h3>
+                <p>Business Developper</p>
+            </div>
+        </div>
+        </section>
+
+
+        <!-- Ajoutez d'autres sections au besoin -->
+    </main>
+
+    <footer>
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2024 Green Mode Association. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleSection(sectionId) {
+            const content = document.getElementById(`${sectionId}Content`);
+            content.style.display = (content.style.display === 'none') ? 'block' : 'none';
+        }
+    </script>
+
+</body>
+
+</html>
